@@ -1,190 +1,413 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="bpaas-design-system" content="brutalist-avantgarde">
-<meta name="bpaas-design-theme" content="kr-neon-void">
-<meta name="description" content="상수 마사지 찐 후기! 내돈내산으로 다녀온 상수역 마사지 샵 추천. 가격, 위치, 꿀팁까지 솔직하게 알려드려요. 전화 010-6279-0862">
-<meta name="keywords" content="상수 마사지, 상수 마사지 추천, 상수 마사지 후기, 상수역 마사지, 마사지 블로그">
-<meta name="author" content="상수 마사지 추천정보">
-<link rel="canonical" href="https://roomlab-dangsan.xyz/blog.html">
-<!-- Open Graph -->
-<meta property="og:title" content="상수 마사지 추천정보 블로그 — 찐 후기만 모았다">
-<meta property="og:description" content="상수역 근처 마사지 내돈내산 후기. 가격, 위치 꿀팁 대방출! 전화 010-6279-0862">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://roomlab-dangsan.xyz/blog.html">
-<title>상수 마사지 추천정보 블로그 — 찐 후기</title>
-<style>
-/* RESET */
-* { margin:0; padding:0; box-sizing:border-box; }
-html { font-size:16px; scroll-behavior:smooth; }
-body { background:#0b0b0b; color:#f5f5f5; font-family:'Courier New', monospace; line-height:1.6; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상수동 마사지 추천정보 & 힐링 가이드 - Black Book</title>
+    <meta name="description" content="상수동 지역을 찾는 분들을 위한 프리미엄 마사지 정보와 방문 전 필수 체크리스트. Black Book Concierge 가 엄선한 온돌마사지, 침술 등 다양한 스타일의 차분하고 신뢰할 수 있는 가이드입니다.">
+    <meta name="keywords" content="상수동 마사지 추천정보, 상수동 휴식처, 프리미엄 힐링, 마사지 예약 팁, 온돌마사지 정보, 블랙북 컨시어지">
+    <link rel="canonical" href="https://www.example-domain.com/shangsudong-massage-guide.html">
+    
+    <!-- BPAAS Design System & Theme -->
+    <meta name="bpaas-design-system" content="editorial-apple">
+    <meta name="bpaas-design-theme" content="kr-midnight-gold">
 
-/* CONTAINERS – full bleed */
-header, .hero, section, footer {
-  width:100%; max-width:1200px; margin:0 auto; padding:2rem 1rem;
-}
-.section-gap { height:3rem; }
+    <!-- Open Graph & Twitter Card -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="상수동 마사지 추천정보 & 힐링 가이드 - Black Book">
+    <meta property="og:description" content="상수동 지역을 찾는 분들을 위한 프리미엄 마사지 정보와 방문 전 필수 체크리스트. 차분하고 신뢰할 수 있는 가이드를 만나보세요.">
 
-/* TYPOGRAPHY */
-h1 { font-size:2.8rem; font-weight:700; text-transform:uppercase; letter-spacing:-1px; color:#ff00ff; border-bottom:3px solid #00ffff; display:inline-block; margin-bottom:1.5rem; }
-h2 { font-size:2rem; font-weight:600; color:#00ffff; margin:2rem 0 1rem; border-left:5px solid #ff00ff; padding-left:1rem; }
-h3 { font-size:1.4rem; font-weight:500; color:#ffcc00; margin:1.5rem 0 0.5rem; }
-p { font-size:1.1rem; margin-bottom:1.2rem; color:#d0d0d0; }
-a { color:#00ffff; text-decoration:underline; transition:0.2s; }
-a:hover { color:#ff00ff; }
+    <!-- CSS Variables (Reused from previous context) -->
+    <style>
+        /* CSS Variables - Midnight Gold Theme */
+        :root {
+            --bg-color: #0F172A; /* Deep Midnight Blue */
+            --card-bg: #1E293B; /* Slightly lighter blue-grey */
+            --text-primary: #F8FAFC; /* Off-white for contrast */
+            --text-secondary: #94A3B8; /* Muted grey-blue */
+            --accent-color: #D4AF37; /* Metallic Gold - The "Midnight Gold" touch */
+            --border-color: #334155;
+            
+            --font-main: 'Inter', sans-serif;
+            --font-heading: 'Playfair Display', serif; /* Editorial feel */
+            
+            --spacing-sm: 0.75rem;
+            --spacing-md: 1.25rem;
+            --spacing-lg: 2rem;
+        }
 
-/* BUTTON STYLE */
-.btn { display:inline-block; background:#111; color:#f5f5f5; padding:0.8rem 2rem; border:2px solid #ff00ff; font-family:inherit; font-size:1rem; cursor:pointer; text-transform:uppercase; letter-spacing:1px; transition:0.2s; }
-.btn:hover { background:#ff00ff; color:#0b0b0b; border-color:#00ffff; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* HEADER */
-header { display:flex; justify-content:space-between; align-items:center; border-bottom:2px solid #333; padding:1rem 1rem; }
-header .logo { font-size:1.8rem; font-weight:700; color:#ff00ff; text-transform:uppercase; }
-header nav a { margin:0 0.8rem; font-size:0.9rem; color:#aaa; text-decoration:none; }
-header nav a.active { color:#00ffff; font-weight:700; border-bottom:2px solid #ff00ff; padding-bottom:2px; }
-header nav a:hover { color:#fff; }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: var(--font-main);
+            line-height: 1.6;
+        }
 
-/* HAMBURGER */
-.hamburger { display:none; flex-direction:column; cursor:pointer; }
-.hamburger span { width:28px; height:3px; background:#f5f5f5; margin:4px 0; transition:0.3s; }
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-family: var(--font-heading);
+            color: #fff;
+            margin-bottom: var(--spacing-md);
+        }
 
-/* HERO */
-.hero { background:linear-gradient(145deg, #1a1a2e 0%, #0b0b0b 100%); text-align:center; padding:4rem 2rem; border:2px dashed #ff00ff; margin-top:1rem; }
-.hero h1 { font-size:3.2rem; border-bottom:0; display:block; }
-.hero p { font-size:1.3rem; max-width:700px; margin:1.5rem auto; }
+        h1 { font-size: 2.5rem; line-height: 1.2; letter-spacing: -0.02em; }
+        h2 { font-size: 1.875rem; color: var(--accent-color); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem; margin-top: 3rem; }
+        h3 { font-size: 1.25rem; color: #fff; margin-top: 1.5rem; }
 
-/* SECTION CARDS */
-.card { background:#1c1c1c; border:1px solid #333; padding:1.5rem; margin-bottom:1.5rem; transition:0.2s; }
-.card:hover { border-color:#ff00ff; box-shadow:0 0 15px rgba(255,0,255,0.3); }
-.card h3 { margin-top:0; }
+        p { margin-bottom: 1.25rem; color: var(--text-secondary); max-width: 65ch; }
+        
+        strong { color: var(--accent-color); font-weight: 600; }
 
-/* FAQ */
-.faq-item { margin-bottom:1rem; border-bottom:1px solid #2a2a2a; padding-bottom:1rem; }
-.faq-item summary { font-size:1.2rem; font-weight:600; color:#00ffff; cursor:pointer; }
-.faq-item p { margin-top:0.8rem; }
+        /* Utility & Layout */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--spacing-lg) 0;
+        }
 
-/* FOOTER */
-footer { border-top:2px solid #333; padding:2rem 1rem; text-align:center; font-size:0.9rem; color:#777; }
-footer a { color:#aaa; }
+        .section-gap-160 { margin-bottom: 4rem; }
+        
+        /* Navigation */
+        nav {
+            background-color: rgba(30, 41, 59, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
 
-/* RESPONSIVE 768 */
-@media (max-width:768px) {
-  header { flex-wrap:wrap; }
-  header nav { display:none; width:100%; text-align:center; margin-top:1rem; }
-  header nav.show { display:flex; flex-direction:column; gap:0.5rem; }
-  .hamburger { display:flex; }
-  h1 { font-size:2rem; }
-  .hero h1 { font-size:2.2rem; }
-  .hero p { font-size:1rem; }
-}
-</style>
+        .nav-list {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+        }
+
+        .logo-text { font-weight: 700; color: var(--accent-color); letter-spacing: -0.03em; text-transform: uppercase; font-size: 1rem;}
+        
+        @media (min-width: 768px) {
+            .nav-list { justify-content: center; gap: 2.5rem; }
+            h1 { font-size: 3rem; }
+            .container { max-width: 900px; width: 95%; }
+        }
+
+        /* Hero Section - Grid Pattern Back */
+        .hero-section {
+            position: relative;
+            padding: 4rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .hero-bg-pattern {
+            background-image: radial-gradient(var(--text-secondary) 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.15;
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            z-index: -1;
+        }
+
+        /* Grid Layout for Recommendations */
+        .grid-recommendations {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .card-item {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 1.5rem;
+            border-radius: 4px; /* Slightly softer edge */
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+            border-color: var(--accent-color);
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: rgba(212, 175, 55, 0.2); /* Transparent Gold */
+            color: var(--accent-color);
+            padding: 0.25rem 0.6rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .price-range { display: block; color: #fff; margin-top: 1rem; font-weight: 400; font-family: monospace;}
+
+        /* Feature Comparison Table */
+        .comparison-table-wrapper {
+            overflow-x: auto;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+        }
+
+        table { width: 100%; min-width: 600px; border-collapse: collapse; }
+        
+        th, td { padding: 1rem; text-align: left; border-bottom: 1px solid var(--border-color); }
+        th { background-color: rgba(255,255,255,0.03); color: var(--text-primary); font-weight: 600;}
+        tr:last-child td { border-bottom: none; }
+
+        /* Checklist & FAQ */
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .check-icon { color: var(--accent-color); margin-right: 0.75rem; margin-top: -2px; flex-shrink: 0; font-size: 1.2rem;}
+
+        /* Accordion for FAQ */
+        details {
+            background-color: rgba(30, 41, 59, 0.8);
+            border: 1px solid var(--border-color);
+            margin-bottom: 0.75rem;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        summary {
+            padding: 1rem;
+            cursor: pointer;
+            font-weight: 500;
+            list-style: none; /* Hide default arrow */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        summary::-webkit-details-marker { display: none; }
+        
+        summary::after { content: '+'; color: var(--text-secondary); font-size: 1.2rem;}
+        details[open] summary::after { content: '-'; color: var(--accent-color);}
+
+        .faq-content { padding: 0 1rem 1rem 1rem; border-top: 1px solid rgba(255,255,255,0.05); }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.25rem; }
+            .nav-list { gap: 1.5rem; flex-wrap: wrap; padding: 0 1rem;}
+            .hero-section { padding-top: 3rem; }
+        }
+    </style>
 </head>
 <body>
 
-<!-- HEADER -->
-<header>
-  <div class="logo">상수마사지</div>
-  <nav id="mainNav">
-    <a href="/">홈</a>
-    <a href="/blog" class="active">블로그</a>
-    <a href="/info">가격정보</a>
-    <a href="/contact">문의</a>
-  </nav>
-  <div class="hamburger" onclick="toggleNav()">
-    <span></span><span></span><span></span>
-  </div>
-</header>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <ul class="nav-list">
+                <li><a href="#" style="color:white; text-decoration:none;">Home</a></li>
+                <li><a href="#recommendations" style="color:var(--accent-color); text-decoration:none;">추천 마사지</a></li>
+                <li><a href="#checklist" style="color:white; text-decoration:none;">방문 가이드</a></li>
+                <li><a href="#faq" style="color:white; text-decoration:none;">FAQ</a></li>
+                <li><span class="logo-text">BLACK BOOK</span></li>
+            </ul>
+        </div>
+    </nav>
 
-<!-- HERO -->
-<div class="hero">
-  <h1>상수 마사지 찐 후기 블로그</h1>
-  <p>내돈내산으로 직접 경험하고 솔직하게 씁니다. 가격, 위치, 관리사님 손길까지 다 까발림. 망설이면 너만 손해!</p>
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="hero-bg-pattern"></div>
+        <div class="container">
+            <h1>상수동 마사지 추천정보 & 힐링 가이드</h1>
+            <p>
+                도시의 번잡함 소ᅩᆨ에서 잠시 멈춰 서고 싶은 순간, 상수동은 고요한 위안을 선사합니다. 강변의 잔잔한 바람과 예술적인 골목길이 어우러진 이곳에서, 몸과 마음의 피로를 깊이 달래줄 프리미엄 마사지 경험을 찾아 헤매는 당신을 위해 <strong class="logo-text">Black Book Concierge</strong>가 엄선한 가이드를 준비했습니다. 단순한 육체적 이완을 넘어, 내면의 평화를 되찾는 여정으로 당신을 초대합니다. 
+                상수동의 숨겨진 보석 같은 공간에서 펼쳐지는 특별한 힐링의 순간들, 그 속에서 당신은 진정한 휴식을 발견하게 될 것입니다.
+            </p>
+            <p>
+                이 가이드는 단순한 정보 나열을 넘어, 마치 오랜 친구가 건네는 감각적인 저널 에세이처럼 상수동 마사지의 정수를 담아내려 노력했습니다. 각 공간이 가진 독특한 분위기, 테라피스트의 섬세한 손길, 그리고 당신의 오감을 사로잡을 향기와 음악까지, 모든 요소가 어우러져 만들어내는 완벽한 휴식의 풍경을 그려봅니다. 이곳 상수동에서 당신만의 잊지 못할 힐링 스토리를 만들어가시길 바랍니다.
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <section id="recommendations" class="section-gap-160">
+            <h2>Black Book Concierge의 엄선된 추천</h2>
+            <p>
+                상수동의 정취와 어우러진 각기 다른 매력의 핼링 스팟들을 소개합니다. 이곳들은 단순한 마사지 샵이 아닌, 당신의 몸과 마음을 섬세하게 어루만져줄 특별한 공간들입니다. 오랜 경험과 까다로운 안목으로 선별한 곳들이니, 당신의 취향에 맞는 완벽한 안식처를 발견해보세요. 따스한 온기로 지친 근육을 녹여주는 온돌 마사지부터, 현대적인 감각으로 재해석된 전통 침술까지, 상수동만의 독특한 힐링 스펙트럼을 경험할 수 있습니다.
+            </p>
+
+            <div class="grid-recommendations">
+                <div class="card-item">
+                    <span class="tag">프리미엄 온돌</span>
+                    <h3>고요한 새벽</h3>
+                    <p>
+                        은은한 온기가 전신을 감싸는 온돌 마사지는 깊은 이완을 선사합니다. 한국 전통의 지혜가 담긴 따뜻한 돌 위에서, 숙련된 테라피스트의 손길이 뭉친 근육을 부드럽게 풀어줍니다. 마치 어머니의 품처럼 아늑하고 포근한 경험 속에서, 도ᅩ시의 소음은 저 멀리 사라지고 오직 평화만이 남습니다. 몸의 온도가 서서히 올라가며 혈액순환이 촉진되고, 마음속 깊이 자리했던 스트레스까지 자연스럽게 녹아내리는 것을 느낄 수 있습니다.
+                    </p>
+                    <span class="price-range">₩₩₩</span>
+                </div>
+
+                <div class="card-item">
+                    <span class="tag">전통 침술 & 테라피</span>
+                    <h3>지혜로운 손길</h3>
+                    <p>
+                        전통 침술의 정교함과 현대 테라피의 편안함을 결합한 곳입니다. 단순히 통증 부위를 넘어, 몸 전체의 균형을 찾아주는 섬세한 접근이 인상적입니다. 예리하면서도 부드러운 침술은 에너지의 흐름을 원활하게 하고, 이어진 아로마 테라피는 심신을 안정시킵니다. 오랜 시간 누적된 피로와 긴장이 한 올 한 올 풀려나가며, 잃었던 활력을 되찾는 기적 같은 순간을 경험하게 될 것입니다. 몸 안의 기운이 다시 조화롭게 흐르는 느낌은 형언할 수 없는 평온함을 가져다줍니다.
+                    </p>
+                    <span class="price-range">₩₩₩₩</span>
+                </div>
+
+                <div class="card-item">
+                    <span class="tag">아로마 딥티슈</span>
+                    <h3>향기의 숲</h3>
+                    <p>
+                        고품질 아로마 오일과 깊은 압력의 딥티슈 마사지가 만나, 근육 속 깊이 숨겨진 긴장까지 해소합니다. 각자의 상태에 맞는 아로마를 선택하여 후각을 통해 먼저 마음의 문을 열고, 이어서 숙련된 테크닉으로 굳어진 조직을 이완시킵니다. 숲속을 걷는 듯한 상쾌함과 동시에, 몸속 깊은 곳에서부터 차오르는 따뜻한 에너지를 느낄 수 있습니다. 향기로운 오일이 피부에 스며들어 부드러움을 더하고, 정신적인 평화와 육체적인 해방감을 동시에 선사합니다.
+                    </p>
+                    <span class="price-range">₩₩₩</span>
+                </div>
+            </div>
+        </section>
+
+<!-- SEO Visual 2: 마사지 Cardless Editorial List -->
+<div class="seo-visual-cards" role="img" aria-label="상수 마사지 추천정보 마사지 — 신뢰할 수 있는 서비스" 
+     style="display:flex;flex-direction:column;gap:0;margin:40px 0;border-top:1px solid #e5e5e0;border-bottom:1px solid #e5e5e0;background:#faf9f6">
+  <div style="display:flex;align-items:center;justify-content:space-between;padding:24px 16px;border-bottom:1px solid #e5e5e0;background:transparent">
+    <div style="display:flex;align-items:center;gap:24px">
+      <span style="font-family:monospace;font-size:1rem;color:#8a7355;letter-spacing:0.05em;font-weight:500">[ 01 ]</span>
+      <span style="font-family:serif;font-weight:400;font-size:1.2rem;color:#1c1c1e;letter-spacing:-0.02em">특화</span>
+    </div>
+    <span style="font-family:sans-serif;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;color:#8a7355;font-weight:600">상수 마사지 추천정보</span>
+  </div><div style="display:flex;align-items:center;justify-content:space-between;padding:24px 16px;border-bottom:1px solid #e5e5e0;background:transparent">
+    <div style="display:flex;align-items:center;gap:24px">
+      <span style="font-family:monospace;font-size:1rem;color:#8a7355;letter-spacing:0.05em;font-weight:500">[ 02 ]</span>
+      <span style="font-family:serif;font-weight:400;font-size:1.2rem;color:#1c1c1e;letter-spacing:-0.02em">다수 실적</span>
+    </div>
+    <span style="font-family:sans-serif;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;color:#8a7355;font-weight:600">상수 마사지 추천정보</span>
+  </div><div style="display:flex;align-items:center;justify-content:space-between;padding:24px 16px;border-bottom:none;background:transparent">
+    <div style="display:flex;align-items:center;gap:24px">
+      <span style="font-family:monospace;font-size:1rem;color:#8a7355;letter-spacing:0.05em;font-weight:500">[ 03 ]</span>
+      <span style="font-family:serif;font-weight:400;font-size:1.2rem;color:#1c1c1e;letter-spacing:-0.02em">고품질</span>
+    </div>
+    <span style="font-family:sans-serif;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;color:#8a7355;font-weight:600">상수 마사지 추천정보</span>
+  </div>
 </div>
 
-<!-- MAIN ARTICLE – 정보성 글 1편 -->
-<section>
-  <article>
-    <h2>상수역 마사지 추천 — '루나힐' 다녀온 솔직 후기</h2>
-    <p>작년 말부터 어깨랑 목이 뻐근해서 마사지 알아보고 있었는데, 상수역 근처에 괜찮은 곳이 많다고 하더라고요. 그래서 지난주에 직장 동생이 추천해준 <strong>‘루나힐’</strong>이라는 곳을 다녀왔습니다. 내돈내산이니까 거짓말 안 하고 써볼게요.</p>
+        <section class="section-gap-160">
+            <h2>나에게 맞는 마사지 선택 가이드</h2>
+            <p>
+                수많은 선택지 앞에서 망설에는 당신을 위해, Black Book Concierge가 간략한 비교 가이드를 제공합니다. 어떤 종류의 마사지가 당신에게 가장 이상적인 힐링 경험을 선사할지, 아래 표를 통해 한눈에 비교해보고 현명한 결정을 내리시길 바랍니다.
+            </p>
 
-    <h3>📍 위치 & 분위기</h3>
-    <p>상수역 2번 출구에서 도보 3분? 골목 쪼매 들어가야 하는데 네이버 지도보면 금방 찾아요. 건물 2층이고 들어가자마자 은은한 향과 어두운 조명이 되게 힐링 모드로 바꿔줬음. 인테리어는 깔끔한데 좀 좁은 느낌? 그래도 청결하고 좋았어요.</p>
+            <div class="comparison-table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>마사재 종류</th>
+                            <th>주요 효과</th>
+                            <th>추천 대상</th>
+                            <th>특징</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>온돌 마사지</td>
+                            <td>혈액순환 개선, 근육 이완, 심신 안정</td>
+                            <td>몸이 차고 만성 피로가 있는 분, 깊은 이완을 원하는 분</td>
+                            <td>따뜻한 온돌 위에서 진행, 전통적인 힐링 경험</td>
+                        </tr>
+                        <tr>
+                            <td>침술 & 테라피</td>
+                            <td>통증 완화, 기혈 순환, 몸의 균형 회복</td>
+                            <td>특정 통증 부위가 있는 분, 한방 치료에 관심 있는 분</td>
+                            <td>정교한 침술과 현대 테라피의 조화</td>
+                        </tr>
+                        <tr>
+                            <td>아로마 딥티슈</td>
+                            <td>근육 통증 완화, 스트레스 해소, 피부 보습</td>
+                            <td>강한 압력을 선호하는 분, 아로마 향을 좋아하는 분</td>
+                            <td>다양한 아로마 오일 사용, 깊은 근육층 자극</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
 
-    <h3>💆‍♂️ 받은 코스: 90분 스웨디시</h3>
-    <p>가격은 12만원. 상수 마사지 평균 가격대랑 비슷한데, 여기 특징은 오일이랑 핫스톤을 섞어서 한다는 점. 관리사님이 손이 정말 뜨겁고 꾹꾹 눌러주는 힘이 좋았음. 중간에 잠들 뻔 했어요. 특히 승모근 쪽이 진짜 시원했고, 다리 마사지도 디테일하게 해주셔서 붓기 빠지는 느낌이 들더라구요.</p>
+        <section id="checklist" class="section-gap-160">
+            <h2>방문 전 필수 체크리스트</h2>
+            <p>
+                성공적인 힐링 경험을 위해 방문 전 몇 가지 사항을 미리 확인하는 것은 중요합니다. 작은 준비가 더욱 만족스러운 시간을 만들어줄 것입니다.
+            </p>
+            <div class="checklist-items">
+                <div class="checklist-item">
+                    <span class="check-icon">&#10003;</span>
+                    <p><strong>예약 필수 여부 확인:</strong> 상수동의 프리미엄 마사지 샵은 예약제로 운영되는 경우가 많습니다. 방문 전 전화 또는 온라인을 통해 반드시 예약 여부를 확인바꼬, 원하는 시간대에 미리 예약하는 것이 좋습니다. 특히 주말이나 특정 시간대는 빠르게 마감될 수 있으니 여유를 가지고 준비하세요.</p>
+                </div>
+                <div class="checklist-item">
+                    <span class="check-icon">&#10003;</span>
+                    <p><strong>주차 및 교통편 확인:</strong> 대중교통 이용이 편리하지만, 자가용 이용 시 주차 가능 여부와 주변 유료 주차장 정보를 미리 파악해두면 좋습니다. 상수동 골목길은 다소 협소할 수 있으니, 여유로운 마음으로 이동 계획을 세워보세요.</p>
+                </div>
+                <div class="checklist-item">
+                    <span class="check-icon">&#10003;</span>
+                    <p><strong>개인 건강 상태 고지:</strong> 특이 체질, 알레르기, 임신 여부, 특정 부위 통증 등 개인의 건강 상태나 특별히 주의해야 할 점이 있다면 테라피스트에게 미리 알려주세요. 이는 더욱 안전하고 효과적인 맞춤형 케어를 받는 데 도움이 됩니다.</p>
+                </div>
+                <div class="checklist-item">
+                    <span class="check-icon">&#10003;</span>
+                    <p><strong>복장 준비:</strong> 편안한 복장으로 방문하는 것이 가장 좋지만, 대부분의 샵에서는 마사지용 가운을 제공합니다. 마사지 후 일정을 고려하여 간편한 옷차림을 준비하는 것도 좋은 방법입니다.</p>
+                </div>
+                <div class="checklist-item">
+                    <span class="check-icon">&#10003;</span>
+                    <p><strong>충분한 시간 확보:</strong> 마사지 시간 외에도 상담, 환복, 그리고 마사지 후 제공되는 차 한 잔의 여유까지 충분히 즐길 수 있도록 넉넉하게 시간을 확보하는 것이 중요합니다. 서두르지 않고 온전히 휴식에 집중할 때, 그 효과는 배가 됩니다.</p>
+                </div>
+            </div>
+        </section>
 
-    <h3>👍 좋았던 점</h3>
-    <p>- 예약이 잘 되어있음 (전날 카톡으로 알림 옴)<br>- 오일 냄새 안 남 (민감한 사람도 괜찮을 듯)<br>- 관리사님이 통증 부위 물어보고 집중 관리해줌<br>- 가격 대비 퀄리티 좋음</p>
+        <section id="faq" class="section-gap-160">
+            <h2>자주 묻는 질문 (FAQ)</h2>
+            <p>
+                상수동 마사지 방문에 앞서 궁금할 수 있는 점들을 모아봤습니다. 당신의 궁금증이 해소되길 바랍니다.
+            </p>
 
-    <h3>👎 아쉬운 점</h3>
-    <p>- 탈의실이 좁음 (옷 갈아입을 때 불편)<br>- 예약이 꽉 차있어서 원하는 시간에 못 잡을 수도 있음 (최소 2~3일 전 예약 추천)<br>- 샤워실이 1개라서 대기해야 할 때 있음</p>
+            <details>
+                <summary>Q. 상수동 마사지 샵은 가격대가 높은 편인가요?</summary>
+                <div class="faq-content">
+                    <p>
+                        상수동은 주로 프리미엄 서비스를 지향하는 곳이 많아 일반적인 마사지 샵보다는 가격대가 다소 높을 수 있습니다. 하지만 그만큼 고품질의 서비스와 개인화된 케어를 기대할 수 있습니다. 획일화된 경험이 아닌, 당신의 몸과 마음을 위한 섬세한 투자를 고려한다면 충분히 가치 있는 선택이 될 것입니다. 각 샵마다 다양한 프로그램과 가격대가 있으니, 예산에 맞춰 선택하는 것이 중요합니다.
+                    </p>
+                </div>
+            </details>
 
-    <h3>💰 총평 & 꿀팁</h3>
-    <p><strong>총점: 4.5/5</strong> 상수역 근처에서 스웨디시 제대로 받고 싶다면 루나힐은 진짜 괜찮은 선택. 단, 예약은 꼭 미리 하세요. 나중에 가격 이벤트 할 때 가면 더 좋을 듯. 전화나 톡으로 문의해보시길. 참고로 내 번호는 <a href="tel:010-6279-0862">010-6279-0862</a> 이니까 궁금한 거 있으면 편하게 연락주세요~</p>
+            <details>
+                <summary>Q. 마사지 종류를 선택하기 어ᄅ려울 때는 어떻게 해야 하나요?</summary>
+                <div class="faq-content">
+                    <p>
+                        걱정하지 마세요. 대부분의 프리미엄 마사지 샵에서는 방문 시 전문 테라피스트와의 충분한 상담 시간을 제공합니다. 당신의 현재 몸 상태, 집중적으로 관리받고 싶은 부위, 선호하는 압력 등을 상세히 이야기하면, 테라피스트가 가장 적합한 마사지 종류와 프로그램을 추천해 줄 것입니다. 그들의 전문적인 조언을 믿고 따르는 것이 최상의 경험을 위한 지름길입니다.
+                    </p>
+                </div>
+            </details>
 
-    <div style="margin-top:2rem; border-top:1px dashed #444; padding-top:1rem;">
-      <p><strong>태그:</strong> #상수마사지 #상수역마사지 #내돈내산 #루나힐 #마사지추천</p>
-    </div>
-  </article>
+            <details>
+                <summary>Q. 마사지 후 주의해야 할 점이 있나요?</summary>
+                <div class="faq-content">
+                    <p>
+                        마사지 후에는 몸이 이완되면서 나른함을 느낄 수 있습니다. 충분한 휴시ᄔ을 취하고 미지근한 물을 많이 마셔 몸속 노폐물 배출을 돕는 것이 좋습니다. 갑작스러운 격렬한 운동이나 과음은 피하고, 몸의 변화를 충분히 느끼며 편안한 상태를 유지해주세요. 일부 딥티슈 마사지 후에는 가벼운 근육통이 있을 수 있으나, 이는 자연스러운 반응이니 너무 걱정하지 않으셔도 됩니다.
+                    </p>
+                </div>
+            </details>
+        
+<div class="seo-visual-divider" role="separator" aria-label="상수 마사지 추천정보 구분선" style="margin:32px 0;text-align:center;color:#e5e5e0;font-size:0.85rem;letter-spacing:0.5em">◆ ◆ ◆</div>
 </section>
 
-<!-- SECTION-GAP -->
-<div class="section-gap"></div>
+    </main>
 
-<!-- FAQ -->
-<section>
-  <h2>자주 묻는 질문 (FAQ)</h2>
-
-  <details class="faq-item">
-    <summary>상수역 근처 마사지 샵 예약은 어떻게 하나요?</summary>
-    <p>보통 네이버 예약이나 전화로 가능해요. 제가 다녀온 루나힐 같은 경우는 카톡 플러스친구로도 예약 가능하더라구요. 전화 010-6279-0862로 연락주셔도 제가 아는 정보 다 알려드려요.</p>
-  </details>
-
-  <details class="faq-item">
-    <summary>평균 가격대는 얼마인가요?</summary>
-    <p>상수 마사지 샵들은 보통 60분에 8~10만원, 90분 스웨디시는 11~15만원 정도 합니다. 타이 마사지는 좀 더 저렴하고, 아로마나 핫스톤이 포함되면 비싸져요. 내돈내산 기준으로는 12만원대가 가장 가성비 좋았음.</p>
-  </details>
-
-  <details class="faq-item">
-    <summary>남성도 갈 수 있는 곳인가요?</summary>
-    <p>네, 대부분 남녀 모두 이용 가능합니다. 단, 몇몇 샵은 여성전용이나 남성전용이 따로 있으니까 예약 전에 꼭 확인하세요. 제가 다녀온 곳은 남녀 구분 없이 운영했어요.</p>
-  </details>
-
-  <details class="faq-item">
-    <summary>주차는 가능한가요?</summary>
-    <p>상수역 주변은 주차장이 많지 않아요. 대중교통 이용하시는 걸 추천드려요. 차 가져가야 한다면 근처 공영주차장 이용하거나 가게에 주차 가능한지 미리 물어보세요.</p>
-  </details>
-
-  <details class="faq-item">
-    <summary>더 궁금한 게 있는데 어떻게 연락하나요?</summary>
-    <p>전화 010-6279-0862 또는 상수마사지 추천정보 블로그 게시글에 댓글 남겨주시면 답변 드릴게요. 최대한 빨리 알려드릴게요!</p>
-  </details>
-</section>
-
-<!-- SECTION-GAP -->
-<div class="section-gap"></div>
-
-<!-- CTA -->
-<section style="text-align:center; border:2px solid #ff00ff; padding:3rem 1rem;">
-  <h2>상수 마사지, 고민 말고 연락주세요!</h2>
-  <p>제가 직접 경험한 샵 위주로 정보 드려요. 가격, 위치, 후기까지 다 알려줌.</p>
-  <a href="tel:010-6279-0862" class="btn">📞 010-6279-0862 전화하기</a>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <p>© 2025 상수 마사지 추천정보 | 문의: <a href="tel:010-6279-0862">010-6279-0862</a></p>
-  <p>내돈내산 후기, 솔직담백하게 전해드려요</p>
-</footer>
-
-<script>
-function toggleNav() {
-  var nav = document.getElementById('mainNav');
-  nav.classList.toggle('show');
-}
-</script>
+    <!-- Footer -->
+    <footer style="background-color: var(--card-bg); color: var(--text-secondary); padding: 2rem 0; text-align: center; border-top: 1px solid var(--border-color);">
+        <div class="container">
+            <p>&copy; 2023 Black Book Concierge. All rights reserved.</p>
+            <p style="font-size: 0.85rem; margin-top: 0.5rem;">Disclaimer: This guide provides general information and recommendations. Always consult with professionals for specific health concerns.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
