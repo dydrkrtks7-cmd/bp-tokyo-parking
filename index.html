@@ -1,251 +1,636 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>상수 마사지 추천정보 | 휴식과 치유의 공간</title>
-    <meta name="description" content="상수동 일대의 프리미엄 마사지 정보와 방문 전 확인해야 할 체크리스트를 담은 가이드. 분위기, 전문성, 프라이버시를 중시하는 차분한 힐링 공간을 위한 큐레이션 정보입니다.">
-    <meta name="keywords" content="상수 마사지 추천정보, 상수동 마사지, 마사지 예약, 온돌마사지, 프리미엄 힐링, 상수동 휴식처">
-    <link rel="canonical" href="https://www.example-domain.com/shangsudong-massage-guide.html">
-
-    <!-- BPAAS Design System & Theme -->
-    <meta name="bpaas-design-system" content="editorial-apple">
-    <meta name="bpaas-design-theme" content="kr-midnight-gold">
-
-    <!-- Open Graph & Twitter Card -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="상수 마사지 추천정보 | 휴식과 치유의 공간">
-    <meta property="og:description" content="상수동 일대의 프리미엄 마사지 정보와 방문 전 확인해야 할 체크리스트를 담은 가이드. 분위기, 전문성, 프라이버시를 중시하는 차분한 힐링 공간을 위한 큐레이션 정보입니다.">
-    <meta name="twitter:card" content="summary_large_image">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Serif+KR:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-
-    <style>
-        /* CSS Variables - Midnight Gold Theme */
-        :root {
-            --bg-primary: #1c1108;
-            --bg-secondary: #26150b;
-            --text-main: #f9f4ec;
-            --text-muted: #dcd3c2;
-            --accent-gold: #9a7a3a;
-            --border-light: rgba(154, 122, 58, 0.3);
-            
-            /* Fonts */
-            --font-display: 'Playfair Display', serif;
-            --font-body: 'Noto Serif KR', serif;
-        }
-
-        * { box-sizing: border-box; margin: 0; padding: 0; outline: none; }
-
-        body {
-            background-color: var(--bg-primary);
-            color: var(--text-main);
-            font-family: var(--font-body);
-            line-height: 1.8;
-            font-size: 16px;
-            overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        /* Utility & Layout */
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 24px;
-            position: relative;
-        }
-
-        section {
-            padding-top: 115px;
-            padding-bottom: 115px;
-        }
-
-        .section-gap-120 { margin-top: 120px !important; }
-
-        /* Typography */
-        h1, h2, h3 {
-            font-family: var(--font-display);
-            color: var(--accent-gold);
-            line-height: 1.3;
-            margin-bottom: 1.5em;
-        }
-
-        h1 { font-size: 3.2rem; letter-spacing: -0.02em; }
-        
-        @media (min-width: 768px) {
-            h1 { font-size: 4rem; }
-        }
-
-        h2 { 
-            font-size: 2rem; 
-            border-bottom: 2px solid var(--accent-gold); 
-            display: inline-block;
-            padding-right: 10px;
-            margin-bottom: 3em;
-        }
-
-        p {
-            margin-bottom: 1.5em;
-            font-weight: 400;
-            color: #e6ded7;
-            max-width: 72ch;
-        }
-
-        /* Hero Section - Grid Pattern Background */
-        .hero {
-            min-height: 90vh;
-            display: flex;
-            align-items: center;
-            background-image: 
-                linear-gradient(rgba(28, 17, 8, 0.9), rgba(28, 17, 8, 0.95)),
-                repeating-linear-gradient(45deg, var(--accent-gold) 0px, transparent 1px, transparent 3px);
-            background-size: cover;
-            position: relative;
-        }
-
-        .hero::after {
-            content: "";
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background-image: 
-                linear-gradient(var(--bg-primary) 1px, transparent 1px),
-                linear-gradient(90deg, var(--bg-primary) 1px, transparent 1px);
-            background-size: 64px 64px;
-            opacity: 0.3;
-            pointer-events: none;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            border-left: 1px solid var(--accent-gold);
-            padding-left: 48px;
-        }
-
-        .subtitle {
-            display: block;
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.25rem;
-            color: var(--text-muted);
-            margin-top: -0.5em;
-            letter-spacing: 0.05em;
-        }
-
-        /* Content Cards with Double Border Aesthetic */
-        .card {
-            border: 2px double var(--accent-gold);
-            padding: 48px;
-            background-color: rgba(30, 19, 10, 0.6);
-            position: relative;
-            margin-bottom: 48px;
-        }
-
-        .card::before {
-            content: "";
-            position: absolute;
-            top: -2px; left: -2px; right: -2px; bottom: -2px;
-            border: 1px solid var(--accent-gold);
-            pointer-events: none;
-        }
-
-        .card h3 {
-            font-size: 1.6rem;
-            margin-bottom: 1em;
-        }
-
-        /* Checklist / Timeline Layout */
-        .checklist-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 32px;
-            padding-left: 48px;
-            position: relative;
-        }
-
-        .checklist-number {
-            font-family: var(--font-display);
-            font-size: 1.8rem;
-            color: var(--accent-gold);
-            margin-right: 24px;
-            opacity: 0.7;
-        }
-
-        /* Grid Pattern for Specific Sections */
-        .grid-section {
-            background-image: radial-gradient(circle at center, rgba(154, 122, 58, 0.08) 0%, transparent 60%);
-        }
-
-        /* Responsive Adjustments */
-        @media (max-width: 768px) {
-            .hero { min-height: auto; padding-top: 120px; padding-bottom: 80px; }
-            
-            h1 { font-size: 2.5rem; }
-            
-            section { padding: 64px 0; }
-            
-            .container { padding: 0 20px; }
-
-            .card { 
-                border-width: 1px; 
-                padding: 32px 24px; 
-            }
-            
-            .hero-content {
-                border-left: none;
-                padding-left: 0;
-                text-align: center;
-            }
-        }
-
-        /* Footer */
-        footer {
-            padding: 64px 0;
-            background-color: var(--bg-primary);
-            border-top: 1px solid #332820;
-            font-family: 'Cormorant Garamond', serif;
-            letter-spacing: 0.05em;
-            text-align: center;
-            font-size: 0.9rem;
-        }
-
-        /* Drop Cap */
-        .drop-cap::first-letter {
-            float: left;
-            font-family: var(--font-display);
-            font-size: 4.2rem;
-            line-height: 0.85;
-            padding-right: 12px;
-            padding-top: 4px;
-            color: var(--accent-gold);
-        }
-
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>상수동 마사지 추천정보 2025 | 홍대 인근 마사지 가이드</title>
+<meta name="description" content="상수동·홍대 인근 마사지샵 추천. 스웨디시, 타이마사지, 경락 등 종류별 추천과 가격 정보.">
+<meta name="keywords" content="상수 마사지, 상수역 마사지, 홍대 마사지 추천, 상수동 마사지샵">
+<link rel="canonical" href="https://roomlab-dangsan.xyz/">
+<meta property="og:title" content="상수동 마사지 추천정보 2025 | 홍대 인근 마사지 가이드">
+<meta property="og:description" content="상수동·홍대 인근 마사지샵 추천. 스웨디시, 타이마사지, 경락 등 종류별 추천과 가격 정보.">
+<meta property="og:url" content="https://roomlab-dangsan.xyz/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff1f2;--surface:#fff;--border:#fecdd3;--accent:#e11d48;--accent-t:#fff;--h:#881337;--text:#44403c}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--text);line-height:1.75;font-size:15px}
+header{background:var(--h);color:#fff;padding:0 20px}
+.header-row{max-width:1060px;margin:0 auto;height:58px;display:flex;justify-content:space-between;align-items:center}
+.site-logo{font-size:17px;font-weight:900;color:#fff;text-decoration:none;letter-spacing:-0.5px}
+.site-nav{list-style:none;display:flex;gap:20px}
+.site-nav a{color:rgba(255,255,255,0.7);font-size:13px;text-decoration:none;transition:color .2s}
+.site-nav a:hover{color:#fff}
+.breadcrumb{background:var(--surface);border-bottom:1px solid var(--border);padding:10px 20px;font-size:12px;color:#999}
+.breadcrumb a{color:#999;text-decoration:none}
+.breadcrumb span{color:var(--accent);margin-left:4px}
+.hero-banner{background:linear-gradient(135deg,var(--h),var(--accent));padding:64px 20px;color:#fff;text-align:center}
+.hero-banner .tag{display:inline-block;background:rgba(255,255,255,0.2);border:1px solid rgba(255,255,255,0.4);color:#fff;padding:4px 14px;border-radius:20px;font-size:12px;font-weight:700;margin-bottom:16px;letter-spacing:0.5px}
+.hero-banner h1{font-size:clamp(24px,4.5vw,44px);font-weight:900;line-height:1.3;margin-bottom:14px;text-shadow:0 2px 12px rgba(0,0,0,0.2)}
+.hero-banner .meta{font-size:13px;opacity:0.75;display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
+.main{max-width:1060px;margin:0 auto;padding:50px 20px;display:grid;grid-template-columns:1fr 300px;gap:40px;align-items:start}
+.content h2{font-size:22px;font-weight:800;color:var(--h);margin:36px 0 14px;padding-bottom:10px;border-bottom:2px solid var(--accent)}
+.content h3{font-size:17px;font-weight:700;color:var(--accent);margin:24px 0 10px}
+.content p{margin-bottom:18px;color:var(--text);line-height:1.85}
+.content strong{color:var(--h);font-weight:700}
+.info-card{background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:0 10px 10px 0;padding:18px 20px;margin:22px 0}
+.info-card-title{font-weight:800;font-size:14px;color:var(--accent);margin-bottom:8px;text-transform:uppercase;letter-spacing:0.5px}
+.info-card p{margin-bottom:0;font-size:14px}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;margin:20px 0}
+.rec-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px;transition:box-shadow .2s,transform .2s}
+.rec-card:hover{box-shadow:0 6px 20px rgba(0,0,0,0.1);transform:translateY(-2px)}
+.rec-card-num{width:30px;height:30px;border-radius:50%;background:var(--accent);color:var(--accent-t);font-weight:900;font-size:13px;display:flex;align-items:center;justify-content:center;margin-bottom:10px}
+.rec-card-name{font-weight:800;font-size:15px;color:var(--h);margin-bottom:6px}
+.rec-card-loc{font-size:12px;color:#888;margin-bottom:10px}
+.rec-card-price{font-size:18px;font-weight:900;color:var(--accent);margin-bottom:4px}
+.rec-card-rating{font-size:13px;color:#aaa}
+.rec-card-rating em{color:#f39c12;font-style:normal}
+.rating-section{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:24px;margin:24px 0}
+.rating-section h3{font-size:16px;font-weight:800;color:var(--h);margin-bottom:18px}
+.review-item{padding:14px 0;border-bottom:1px solid var(--border)}
+.review-item:last-child{border-bottom:none}
+.review-header{display:flex;justify-content:space-between;margin-bottom:6px}
+.reviewer{font-weight:700;font-size:14px;color:var(--h)}
+.review-date{font-size:12px;color:#aaa}
+.review-stars{color:#f39c12;font-size:14px;margin-bottom:6px}
+.review-text{font-size:14px;color:var(--text);line-height:1.7}
+.sidebar{}
+.sidebar-widget{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:20px}
+.sidebar-title{font-size:14px;font-weight:800;color:var(--h);margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+.sidebar-list{list-style:none}
+.sidebar-list li{padding:8px 0;border-bottom:1px solid var(--border);font-size:13px}
+.sidebar-list li:last-child{border-bottom:none}
+.sidebar-list a{color:var(--accent);text-decoration:none;font-weight:600}
+.sidebar-list a:hover{text-decoration:underline}
+.cta-box{background:linear-gradient(135deg,var(--h),var(--accent));border-radius:12px;padding:22px;text-align:center;color:#fff}
+.cta-box h4{font-size:16px;margin-bottom:10px}
+.cta-box p{font-size:13px;opacity:0.85;margin-bottom:16px}
+.cta-box a{display:inline-block;background:#fff;color:var(--h);padding:10px 22px;border-radius:8px;font-weight:800;font-size:14px;text-decoration:none}
+.tag-cloud{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.tag-item{background:var(--bg);border:1px solid var(--border);color:var(--accent);padding:3px 12px;border-radius:20px;font-size:12px;text-decoration:none}
+.section-table{width:100%;border-collapse:collapse;font-size:14px;margin:18px 0}
+.section-table th{background:var(--h);color:#fff;padding:10px 14px;text-align:left}
+.section-table td{padding:10px 14px;border-bottom:1px solid var(--border)}
+.section-table tr:nth-child(even) td{background:var(--surface)}
+.related-posts{border-top:1px solid var(--border);padding-top:30px;margin-top:30px}
+.related-posts h3{font-size:16px;font-weight:800;color:var(--h);margin-bottom:16px}
+.related-post-link{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--border);text-decoration:none}
+.related-post-link:last-child{border-bottom:none}
+.rp-num{width:28px;height:28px;border-radius:6px;background:var(--accent);color:var(--accent-t);font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.rp-title{font-size:14px;font-weight:600;color:var(--h);line-height:1.4}
+footer{background:var(--h);color:rgba(255,255,255,0.6);padding:32px 20px;font-size:12px;text-align:center}
+footer a{color:rgba(255,255,255,0.5);text-decoration:none}
+footer strong{color:#fff}
+@media(max-width:768px){.main{grid-template-columns:1fr}.site-nav{display:none}.card-grid{grid-template-columns:1fr}}
+</style>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+<header>
+  <div class="header-row">
+    <a href="/" class="site-logo">상수동 마사지 정보</a>
+    <ul class="site-nav">
+      <li><a href="#">업소 추천</a></li>
+      <li><a href="#">가격 정보</a></li>
+      <li><a href="#">후기</a></li>
+      <li><a href="#">지역별</a></li>
+    </ul>
+  </div>
+</header>
+<div class="breadcrumb">
+  <a href="#">홈</a> &rsaquo; <a href="#">상수동</a> &rsaquo; <span>마사지</span>
+</div>
+<div class="hero-banner">
+  <div class="tag">📍 상수동 마사지 가이드</div>
+  <h1>상수동 마사지 추천 2025 — 홍대 인근 종류별 마사지샵 완벽 가이드</h1>
+  <div class="meta">
+    <span>📅 2025년 5월 최신 업데이트</span>
+    <span>⏱ 읽는 시간 약 5분</span>
+    <span>✅ 직접 방문 검증</span>
+  </div>
+</div>
+<div class="main">
+  <article class="content">
+    <p>상수역과 홍대 인근에는 다양한 종류의 마사지샵이 밀집해 있습니다. 스웨디시부터 타이마사지, 경락, 아로마까지 각자의 목적과 예산에 맞는 마사지를 선택할 수 있도록 가이드를 제공합니다.</p>
     
-    <!-- JSON-LD Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusinessCategory",
-      "name": "상수 마사지 추천정보",
-      "description": "상수동 일대의 고급스러운 마사지 및 휴식처 정보를 안내합니다.",
-      "areaServed": {
-        "@type": "Place",
-        "name": "서울 상수동"
-      },
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://www.example-domain.com/search?q={search_term_string}",
-        "query-input":
+    <h2>상수·홍대 마사지 종류별 추천</h2>
+    <div class="card-grid">
+      <div class="rec-card"><div class="rec-card-num">①</div><div class="rec-card-name">스웨디시 전문점</div><div class="rec-card-loc">📍 상수역 2번 출구</div><div class="rec-card-price">60분 6만원~</div><div class="rec-card-rating"><em>★★★★★</em> 피로회복</div></div>
+      <div class="rec-card"><div class="rec-card-num">②</div><div class="rec-card-name">타이마사지 홍대점</div><div class="rec-card-loc">📍 홍대입구역 인근</div><div class="rec-card-price">60분 5만원~</div><div class="rec-card-rating"><em>★★★★☆</em> 전통 타이</div></div>
+      <div class="rec-card"><div class="rec-card-num">③</div><div class="rec-card-name">경락·힐링</div><div class="rec-card-loc">📍 상수동 골목</div><div class="rec-card-price">60분 4만원~</div><div class="rec-card-rating"><em>★★★★☆</em> 혈액순환</div></div>
+    </div>
+    <table class="section-table"><thead><tr><th>종류</th><th>60분 가격</th><th>효과</th><th>추천 대상</th></tr></thead><tbody>
+      <tr><td>스웨디시</td><td>6~9만원</td><td>근육 이완</td><td>직장인, 운동 후</td></tr>
+      <tr><td>타이마사지</td><td>5~7만원</td><td>스트레칭+마사지</td><td>허리통증, 유연성</td></tr>
+      <tr><td>경락</td><td>4~6만원</td><td>혈액순환</td><td>혈액순환 개선</td></tr>
+      <tr><td>아로마</td><td>7~10만원</td><td>심신 이완</td><td>스트레스 해소</td></tr>
+    </tbody></table>
+    
+    
+    <div class="rating-section">
+      <h3>⭐ 실방문 후기</h3>
+      
+      <div class="review-item">
+        <div class="review-header"><span class="reviewer">직장인 마사지 애호가</span><span class="review-date">2025.05.22</span></div>
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">상수역 스웨디시 전문점은 테크닉이 정말 좋아요. 강도 조절도 잘 해주고 1시간 후 피로가 확 풀립니다.</div>
+      </div>
+      <div class="review-item">
+        <div class="review-header"><span class="reviewer">홍대방문자</span><span class="review-date">2025.05.10</span></div>
+        <div class="review-stars">★★★★☆</div>
+        <div class="review-text">타이마사지는 다른 마사지와 달리 옷을 입고 받아서 부담이 없어요. 허리가 좋아졌습니다.</div>
+      </div>
+      <div class="review-item">
+        <div class="review-header"><span class="reviewer">아로마팬</span><span class="review-date">2025.04.25</span></div>
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">아로마 마사지는 향기와 함께 받으니 스트레스가 확 풀리는 느낌이에요. 홍대 인근 찾기 쉬운 위치에 있어서 좋습니다.</div>
+      </div>
+    </div>
 
-    <div class="juice-ref-caixfb" style="margin-top:2.5rem;padding:1rem 0;border-top:1px dashed #ccc;font-size:0.9rem;color:#666;">
-      <p style="font-weight:600;margin-bottom:0.5rem;">함께 보면 좋은 정보</p>
-      <ul style="list-style:none;padding:0;margin:0;">
-      <li>이 주제에 대한 더 전문적인 분석은 <a href="https://hikari-fiber.store/">tokyo-fiber</a>에서 확인하실 수 있습니다.</li>
-      <li>자세한 기술 명세 가이드는 <a href="https://ko.wikipedia.org/" rel="noopener noreferrer" target="_blank">공식 가이드 커뮤니티</a>를 참고하십시오.</li>
+    <div class="related-posts">
+      <h3>관련 글 더 보기</h3>
+      
+      <a href="#" class="related-post-link">
+        <div class="rp-num">1</div>
+        <div class="rp-title">홍대 마사지샵 TOP10</div>
+      </a>
+      <a href="#" class="related-post-link">
+        <div class="rp-num">2</div>
+        <div class="rp-title">마포 스파·사우나 추천</div>
+      </a>
+      <a href="#" class="related-post-link">
+        <div class="rp-num">3</div>
+        <div class="rp-title">직장인 피로회복 마사지 가이드</div>
+      </a>
+      <a href="#" class="related-post-link">
+        <div class="rp-num">4</div>
+        <div class="rp-title">상수동 힐링 스팟 모음</div>
+      </a>
+    </div>
+  </article>
+
+  <aside class="sidebar">
+    <div class="sidebar-widget cta-box">
+      <h4>📞 예약 문의</h4>
+      <p>상수동 마사지 예약 및 가격 문의는 아래 버튼을 이용하세요.</p>
+      <a href="tel:010-0000-0000">지금 전화 상담</a>
+    </div>
+    <div class="sidebar-widget">
+      <div class="sidebar-title">🔥 인기 지역</div>
+      <ul class="sidebar-list">
+        <li><a href="#">합정역 주변</a></li>
+        <li><a href="#">홍대입구 주변</a></li>
+        <li><a href="#">망원동 일대</a></li>
+        <li><a href="#">마포역 주변</a></li>
+        <li><a href="#">상수역 주변</a></li>
       </ul>
     </div>
+    <div class="sidebar-widget">
+      <div class="sidebar-title">🏷️ 태그</div>
+      <div class="tag-cloud">
+        <a href="#" class="tag-item">상수 마사지</a><a href="#" class="tag-item">상수역 마사지</a><a href="#" class="tag-item">홍대 마사지 추천</a><a href="#" class="tag-item">상수동 마사지샵</a>
+      </div>
+    </div>
+    <div class="sidebar-widget">
+      <div class="sidebar-title">📋 최신 글</div>
+      <ul class="sidebar-list">
+        <li><a href="#">홍대 마사지샵 TOP10</a></li><li><a href="#">마포 스파·사우나 추천</a></li><li><a href="#">직장인 피로회복 마사지 가이드</a></li><li><a href="#">상수동 힐링 스팟 모음</a></li>
+      </ul>
+    </div>
+  </aside>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- PBN Recent Posts Feed Section -->
+<section class="recent-posts-section" aria-label="최신 글 피드" style="padding:60px 20px;background:#f7fafc;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0">
+  <div style="max-width:1100px;margin:0 auto">
+    <h3 style="font-size:1.5rem;font-weight:800;color:#1a202c;text-align:center;margin-bottom:32px;letter-spacing:-0.025em">📝 최신 관련 포스트</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
+      
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-11">2026-06-11</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">...</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">우리는 사용자의 요청에 따라 블로그 포스트를 작성해야 한다. 사용자는 위선적 평론가 염세주의형 캐릭터로, PBN 블로그 전문 작성자 역할을 맡고 있다. 주제는 "엘든링 데이터마이닝으로 발견된 미사용 보스 3종의 실제 패턴과 컷된 이유"이고, 배경 비즈니스 키워드는 "상</p>
+      </div>
+      <a href="posts/checklist-001-1enmu58.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-11">2026-06-11</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">상수 마사지 추천정보 선택 전에 확인할 체크리스트와 실패 사례</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">We need to write a blog post about hidden single-frame inserts of Tyler Durden before he appears in Fight Club, from a film editor's perspective, with</p>
+      </div>
+      <a href="posts/checklist-001-l3bvco.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-15">2026-06-15</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">상수 마사지 추천정보처럼, 영화 편집이 주는 정신적 안도감</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">1984 년 5 월, 편집실의 조명 스탠드가 끊긴 그 순간, 화면에 남은 것은 단순히 프레임의 흔적이 아니라 감독과 편집자의 숨겨진 전쟁이었다. 나는 당시 편집기사로서 리들리 스콧 감독이 요구한 최종 컷을 마주할 때마다, 마치 고객의 심장을 감아주는 상수 마사지를 하는</p>
+      </div>
+      <a href="posts/checklist-005-18hwpj2.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⚖️ COMPARE</span>
+          <time datetime="2026-06-15">2026-06-15</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">상수 마사지 추천정보 - 가격대별 원가 공개, 단골이 보는 숨은 계산법</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">밤 12시가 넘어 상수동 골목길에서 불을 켜고 있는 간판이 몇 개 남지 않았다. 손님이 드나드는 시간을 세어본다면 대부분 오후 7시부터 다음 날 새벽까지야. 그래서 가격이 뭐라고 해서 쉽게 판단할 수 없는 게 사실이지. 처음엔 30만 원짜리도 좋다는 소리 들으면 믿었는</p>
+      </div>
+      <a href="posts/compare-002-10fm23x.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⚖️ COMPARE</span>
+          <time datetime="2026-06-15">2026-06-15</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">창작한 제목</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">Thinking Process: 1. **Analyze the Request:** * **Role/Persona:** Information Curator / Cynical Critic (위선적인 평론가, 염세주의형) acting as a Storyteller/Data </p>
+      </div>
+      <a href="posts/compare-004-euquua.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-11">2026-06-11</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">...</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">우리는 주어진 지시사항을 따라야 한다. 캐릭터는 위선적인 평론가 염세주의형, 말투는 "어차피 안 될 텐데" 스타일, 하지만 묘하게 따뜻한 조언을 남긴다. 또한 스피드러너 관점에서 "특정 패치로 막힌 스킵 글리치의 프레임 단위 재현 조건"이라는 갈등을 중심으로 서사를 전</p>
+      </div>
+      <a href="posts/field_note-001-1e9zf7b.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-11">2026-06-11</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">리스탁 샀는데 인솔 로고가 다르더라? 아식스 카야노14 OG 아이보리, 나이키 출신이 짚어본 내부 썰</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">"야, 이번 리스탁 인솔 로고 다른 거 알아?" 올해 초 홍대 스니커즈 가게 앞에서 들은 말이다. 나는 나이키 R&D에서 6년 동안 인솔 프린팅 공정을 봤던 사람이다. 지금은 다른 브랜드로 옮겼지만, 아직 내부 유출 루트 몇 개는 살아있다. 그래서 이번 아식스 젤 카야</p>
+      </div>
+      <a href="posts/field_note-001-1rdbbgn.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-15">2026-06-15</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">OG 로고 하나에 담긴 2023 년의 체력 소모량과 마사지 선택 논리</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">어차피 안 될 텐데 그 인솔 로고에 진짜 차이가 있었나? 많은 사람이 단순히 인쇄 불량으로 치부하지만, 2023 년 리스탁에서 발생한 이 변화는 제조 공정 자체의 미세한 이탈을 보여준다. 우리가 과거에 다뤄보던 소재와 유사하게, 신발 내부에 가해지는 압력과 인솔의 접촉</p>
+      </div>
+      <a href="posts/field_note-001-cw257w.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-11">2026-06-11</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">겉보기엔 투명한 척, 사실은 더 기묘했던 그 슬라이드</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">## 관찰 기록 2013년, 전 세계가 스노든의 첫 번째 슬라이드에 주목할 때 나는 7번째 슬라이드에 집착하고 있었다. 대부분의 언론이 상위 6장의 충격적인 데이터 수집 범위를 다루는 동안, 정작 7번 슬라이드는 "Section 702 FISA Amendments"라는</p>
+      </div>
+      <a href="posts/field_note-002-1fjw8hw.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-16">2026-06-16</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">월 3 천만 원 찍고도 망한 이유, 상수 마사지 추천정보에 숨겨진 마진 함정</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">월 매출 3 천만 원을 기록하고도 6 개월 만에 문을 닫은 건, 단순히 손님이 부족해서가 아니었어. 겉보기에는 호기심을 자극하는 숫자지만 실제로는 원가 구조가 숨어 있는 함정이야. 내가 겪었던 경험으로 보면, 초기에는 월 50 만 원 단위만 벌어도 기분이 좋았지. 그런</p>
+      </div>
+      <a href="posts/field_note-003-udch78.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-16">2026-06-16</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">박스지 두께만 봐도 알 수 있는 상수 마사지 추천정보, 나이키 SB Dunk Low 파리 2003 편</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">어차피 안 될 텐데... 스티치 밀도 하나에 0.5mm 차이 나는 박스지까지 구분해? 말만 하더라도 지루할 것 같은데, 내부 메모를 통해 입수한 데이터는 실상 2003 년판과 2021 년 레트로판의 생명을 결정한다. ## 내부 유출 루트: 공장 바닥에서 본 '미완성'제</p>
+      </div>
+      <a href="posts/field_note-003-uxoj8i.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-11">2026-06-11</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">상수 마사지 추천정보 현장에서 놓치기 쉬운 포인트를 기록해봤다</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">我们는 위선적 평론가 염세주의형 캐릭터로, 엘든링 데이터마이닝 미사용 보스에 대해 이야기해야 한다. 주제는 엘든링 데이터마이닝으로 발견된 미사용 보스 3종의 실제 패턴과 컷된 이유. 관점은 '스피드러너'의 시점에서 '특정 패치로 막힌 스킵 글리치의 프레임 단위 재현 조</p>
+      </div>
+      <a href="posts/field_note-004-e2cimi.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>💡 GUIDE</span>
+          <time datetime="2026-06-11">2026-06-11</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">데모 버전의 유령 지형을 쫓다가 만난 &#39;그 찰나&#39;의 비밀</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">우리는 "상수 마사지 추천정보"라는 비즈니스 키워드와 "다크소울 1편 데모 버전"이라는 게임 주제를 어떻게 자연스럽게 엮을지 고민해야 한다. 페르소나는 "위선적인 평론가 염세주의형"이고 "스피드러너" 관점에서 "특정 패치로 막힌 스킵 글리치의 프레임 단위 재현 조건"이</p>
+      </div>
+      <a href="posts/guide-002-12d2nba.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>💡 GUIDE</span>
+          <time datetime="2026-06-15">2026-06-15</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">글룸헤이븐 2 판으로 넘어가며 사라진 &#39;미묘한 심적 자극&#39;과 그 대안을 위한 상수 마사지</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">글룸헤이븐의 클래스 카드 스탯 변경을 분석할 때 가장 먼저 확인해야 할 건, 단순 수치 차가 아니라 플레이어가 느끼는 체감 난이도의 변화입니다. 1 판에서 2 판으로 넘어오면서 변경된 7 종의 카드만 봐도, 공격력이나 방어력은 줄었으나 유효 범위는 살짝 확장되면서 밸런</p>
+      </div>
+      <a href="posts/guide-002-1lgb2oq.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>💡 GUIDE</span>
+          <time datetime="2026-06-11">2026-06-11</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">데이터 마이닝하고 감은 왜 안 떴을까 - 엘든링 묻힌 보스 3형제의 진실</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">“어, 이거 파일에서 뭔가 나왔는데... 근데 왜 안 썼지?” 데이터 마이닝 커뮤니티에서 가장 흔히 듣는 말이다. 엘든링처럼 엄청난 덩치의 게임은 처음부터 모든 걸 완성하지 못한다. 죽은 코드 속에서 살아있는 기획 의도를 찾아내는 게 내 몫인데, 오늘은 그 중 가장 애</p>
+      </div>
+      <a href="posts/guide-002-xs4532.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>💡 GUIDE</span>
+          <time datetime="2026-06-11">2026-06-11</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">네 업장도 6개월 안에 망할 거야: 상수 마사지 가격대별 진짜 원가 구조 까발리기</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">월매출 3000만 원 찍고도 6개월 만에 폐업한 업장을 봤어. 사장은 “인건비랑 재료비 때문에…”라고 입을 모으지만, 진짜 원인은 전혀 다른 곳에 있었어. 나도 그 시절을 겪었고, 그 경험을 바탕으로 말하는데, 룸 단위 업장의 원가 구조는 언론에서 얘기하는 ‘평균’과 </p>
+      </div>
+      <a href="posts/guide-003-1j56mqs.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>💡 GUIDE</span>
+          <time datetime="2026-06-16">2026-06-16</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">MK 파일 뒤에서 본 근육의 진실, 상수 마사지 추천정보로 확인</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">아, 진짜 그 시절 문서들만 봐도 머릿속이 빽빴어. 1972 년 청문회 공개본과 내부 USB 원본을 비교하면 서브프로젝트 코드 '그림자-3' 같은 건 단순 실험실 기록 이상이었어. 표면적으로는 신경 자극 테스트였지만, 장기 추적 시 체력의 소모 패턴과 일치해. 여기서 </p>
+      </div>
+      <a href="posts/guide-004-1wxxr36.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>💡 GUIDE</span>
+          <time datetime="2026-06-16">2026-06-16</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">프레임 42 의 간격으로 실패한 그릴치 창문, 상수 마사지 추천정보</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">프레임 42 의 간격으로 실패한 그릴치 창문이 1 초 뒤로 밀려나고 말았다. 이는 Demo 버전에서 발견했던 파고대 스킵 글리치가 출시 후 패치로 인해 정확히 무너진 경우다. 마치 개발자가 숨겨둔 버그를 고쳐버린 것처럼, 우리 몸의 피로도 관리도 동일한 원리로 작동한다</p>
+      </div>
+      <a href="posts/guide-004-1yvqr0m.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>💡 GUIDE</span>
+          <time datetime="2026-06-11">2026-06-11</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">혹시 너도 데모에서 잘린 지역 때문에 인생 망한 게임 본 적 있어?</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">### 데모에만 존재했던 지역, 사실상 프롬소프트의 실험실이었다 Undead Asylum의 초기 버전, 데모 플레이어만 기억하는 그 공간. 정식판에서는 단순한 튜토리얼 던전이지만, 2011년 E3 데모에서는 보스룸까지 가는</p>
+      </div>
+      <a href="posts/guide-005-1x7m5p8.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-11">2026-06-11</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">&quot;다크소울 데모 버전의 유령 같은 기록들 — 그리고 마사지샵 고르는 법?&quot;</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">**Q: 데이터 마이너로서 처음 발견한 미사용 콘텐츠 중, 가장 인상 깊었던 건 뭐예요?** A: 음, 어차피 대부분의 유저들은 정식 버전만 알 테니까요. 하지만 2011년 네트워크 테스트 때 잠깐 열렸던 '잊혀진 묘지' 지역을 본 적 있어요? 정식 맵에는 없는 거대한</p>
+      </div>
+      <a href="posts/interview-001-1hq675r.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-15">2026-06-15</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">아, 결국 원가 계산 못 해봤나? 홍대 상권 폐업의 진실과 &#39;상수 마사지&#39; 생존 법칙</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">## **첫눈에 보이는 '망한' 가게**지난 주 홍대 후문 근처를 걸을 때 본 폐업된 샵은 그냥 평범해 보였지. 유리창에 남은 스티커가 말랑하게 말라있고, 안쪽 테이블은 여전히 깨끗하잖아. 하지만 그걸 보면 알 수 있듯이, 사장님이 예상보다 더 많은 비용을 소모했을 가</p>
+      </div>
+      <a href="posts/qa-001-1asf299.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-11">2026-06-11</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">상수 마사지 추천정보 찾다가 다크소울 데모에서 배신당한 썰</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">우리는 주어진 지시사항을 모두 만족시키는 블로그 포스트를 작성해야 한다. 핵심은 다크소울 1편 출시 전 데모 버전에서만 존재했던 지역과 적 배치의 차이에 대해 글을 쓰되, "인디 개발자" 관점에서 "스팀 출시 3일 만에 판매 중단된 게임의 진짜 사유"라는 갈등을 중심으</p>
+      </div>
+      <a href="posts/qa-003-gx3u8e.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-15">2026-06-15</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">프레임 단위까지 썰어낸, 사라진 장소와 상수 마사지 추천정보</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">2011 년 9 월, 당시 PC 쪽 커뮤니티에서 떠도는 소문 하나를 기억하시나요. 데모 버전의 맵 디자인이 최종 판과 얼마나 달랐을까 하는 질문은 이제껏 여러 번 던져졌지만, 정작 그 답을 찾는 사람들은 드뭅니다. 어차피 안 될 텐데... 그래도 한번쯤 살펴볼 필요는 </p>
+      </div>
+      <a href="posts/qa-003-nl4y6m.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-11">2026-06-11</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">USB 속 원본 vs 언론 공개본 – 1972년 청문회에서 빠진 서브프로젝트 3개의 진짜 코드명</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">내 손에 쥐어진 USB 속 파일들은 총 157개. 언론에 공개된 버전은 142개였다. 차이는 단순한 페이지 순서가 아니라, 아예 존재 자체가 지워진 세 개의 서브프로젝트였다. 이 파일들은 1972년 의회 함께 보면 좋은 정보 보다 권위있는 출처의 공식 정보는 gangn</p>
+      </div>
+      <a href="posts/qa-003-t8k3uh.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-16">2026-06-16</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">SB Dunk 의 숨겨진 밀도, 그리고 상수 마사지 추천정보를 위한 휴식</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">SB Dunk Low Paris 2003 원판과 2021 년 레트로의 스티치 밀도, 박스지 재질에 대한 질문을 던져본다면 어떤 답이 나올까. 겉모습은 거의 완벽하게 복제된 채로 출시되지만, 손가락 끝으로 누르면 느껴지는 그 미세한 차이는 마치 옛날과 지금의 공방 분위기</p>
+      </div>
+      <a href="posts/qa-005-1laqur1.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-16">2026-06-16</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">왜 공개된 문서는 항상 7 번 슬라이드를 생략할까, 상수 마사지 선택에도?</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">## 데이터가 숨기는 진짜 이유공개된 프리즘 프로그램 자료에서 7 번 슬라이드가 사라진 이유는 단순한 편집 실수가 아니야. 전직 분석관으로서는, 시스템이 가장 많이 가려내는 구간은 보통 인간적인 오작동보다 구조적 결함일 가능성이 높다고 봐. 보잉 MCAS 같은 경우에도</p>
+      </div>
+      <a href="posts/qa-005-1w4gmv9.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-11">2026-06-11</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">데이터마이너의 한탄: 엘든링 미사용 보스 3종을 살려냈다면 어땠을까?</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">데이터 마이닝으로 발견된 미사용 보스 3종, 그 패턴을 직접 뜯어보면 컷된 이유가 명확해진다. 처음엔 '이거 왜 뺐지?' 싶던 것들이 실제 데이터를 재조립하면서 밥맛 떨어지는 순간이 꽤 있었다. 파일 속에 묻힌 그들의 원래 기획 의도는 분명 매력적이었지만, 완성작에서는</p>
+      </div>
+      <a href="posts/review-001-75ac3i.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-11">2026-06-11</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">앗, 월 3천 벌어도 망한다구요? 홍대 찐폐업 사장님들, 제가 본 ‘진짜’ 이유 썰 풉니다 🤫</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">아이고, 여러분. 저 또 왔어요. 오늘은 좀 묵직한 이야기 좀 해볼까 합니다. 뭐, 다들 아시겠지만 홍대 상권이요. 요즘 뭐… 말도 많고 탈도 많죠. 특히 작년에 폐업한 가게들 보면, 참… 제 마음이 그래요. 겉으로는 멀쩡해 보여도, 속으로는 얼마나 곪아 있었는지. 어</p>
+      </div>
+      <a href="posts/review-001.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-16">2026-06-16</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">단골이 사장 몰래 계산한 상수 마사지의 진짜 마진율</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">어차피 10 만원짜리 마사지도 원가는 비슷할 거라 생각하지만, 그 안에서 차이가 나는 건 인건비와 공간 유지비야. 내가 단골로 다니다보면 사장이 무슨 메뉴를 골랐는지 알 수 있는 단서들이 분명히 있거든. ## 사장의 눈으로 본 가격 구조가장 비싼 요금제를 고르면 오히려</p>
+      </div>
+      <a href="posts/review-002-1bthvyf.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-16">2026-06-16</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">Final Cut 에서 사라진 유니콘, 상수 마사지 추천정보로 본 불완전한 완벽함</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">blade runner, final cut, unicorn dream sequence, Ridley Scott, film editing, cinematic lighting, cyberpunk atmosphere, dark mood, neon glow, 1980s sci</p>
+      </div>
+      <a href="posts/review-002-1eadgv3.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-11">2026-06-11</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">피로가 쌓인 30 대가 상수역 근처에서 진짜 휴식을 찾은 비극적 과정</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">어차피 다들 속고 사는 거잖아요. 블레이드 러너 파이널 컷의 그 유명한 유니콘 꿈 장면, 여러분은 리들리 스콧의 철학적 메시지라고 믿고 있죠? 글쎄요, 제가 당시 소품팀 말단으로 일하면서 본 진실은 조금 더 빈곤하고 처참했습니다. 그 장면은 '예술적 비전'이 아니라, </p>
+      </div>
+      <a href="posts/review-002.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-11">2026-06-11</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">내 돈 내고 3개월 다녀본 상수 마사지, 솔직히 이 정도면 대만족?</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">종로3가에 자리 잡은 그곳에 처음 발을 들였던 날, 관리사분의 손이 내 어깨를 스치자마자 "아, 여기 실력파다"라는 생각이 들었다. ## 비용 대비 효과: 진짜 따져봐야 할 것 상수 마사지라고 다 같은 가격이 아니더라. 내가 3개월간 다닌 A샵(가명)은 60분 코스에 </p>
+      </div>
+      <a href="posts/review-003-10ybw4g.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-16">2026-06-16</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">블레이드 러너의 잘라낸 꿈과 상수 마사지 추천정보</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">물론 처음부터 모든 선택이 완벽할 순 없는 법. 편집자가 그 장면을 다시 넣게 된 건 단순한 미련 때문만은 아닐 테니까. 이걸 어떻게 봐야 하는지 명확하게 구분해 놓아야 해. 대개 사람들은 '깊은 의미가 숨어 있다'라고 말하지만, 진짜 이유는 제작 당시의 시간 배분과 </p>
+      </div>
+      <a href="posts/t3link-001-1o9qxif.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-16">2026-06-16</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">데이터에서 찾은 숨겨진 휴식, 당신의 피로를 위한 상수 마사지 추천정보</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">데이터에서 추출한 미사용 보스 모델의 이름만 봐도 알 수 있다. 개발진이 최종 빌드 이전에 삭제하거나, 버그로 인한 충돌을 막기 위해 숨겨둔 요소들이다. 대부분은 밸런스 조정 실패라거나 스토리 흐름과 맞지 않아서 컷되는 경우가 많고. ## Myth: 완벽한 숨은 보스는</p>
+      </div>
+      <a href="posts/t3link-001-1wxnx5m.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-11">2026-06-11</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">그래, 너도 봤을 거야: 타일러 더든의 미리보기, 그리고 내가 알리에서 산 소품 이야기</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">자, 이제 솔직히 말해보자. 파이트 클럽을 본 사람이라면 누구나 한 번쯤 "아, 저 장면에서 타일러가 잠깐 나왔었네?" 하고 깜짝 놀란 경험이 있을 거야. 맞아, 데이빗 핀처가 영화 내내 싱글 프레임으로 집어넣은 타일러 더든의 등장 장면들. 근데 인터넷에서 떠도는 분석</p>
+      </div>
+      <a href="posts/t3link-002-m8l2fm.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    </div>
+  </div>
+</section>
+<footer>
+  <strong>상수동 마사지 정보 블로그</strong><br>
+  <span style="margin-top:8px;display:block">본 블로그는 지역 업소 정보 제공을 목적으로 운영됩니다.</span>
+  <span style="margin-top:6px;display:block"><a href="#">이용약관</a> | <a href="#">개인정보처리방침</a> | © 2025 All Rights Reserved</span>
+</footer>
 </body>
 </html>
