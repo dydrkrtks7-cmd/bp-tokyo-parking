@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://blog.roomlab-dangsan.xyz/sitemap.xml
+Sitemap: https://sinjeong-shirts-note.link-hub.org/sitemap.xml
+Sitemap: https://sinjeong-shirts-note.link-hub.org/sitemap-pages.xml
